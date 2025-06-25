@@ -1,0 +1,23 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>Título de la página</title>
+
+    <link rel="canonical" href="https://marketing70.com" />
+    <meta name="description" content="Descripción de la página">
+    <meta name="keywords" content="">
+    <meta name="author" content="https://marketing70.com/">
+    <meta name="theme-color" content="">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/recursos/favicon/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/recursos/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/recursos/favicon/apple-touch-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="/recursos/favicon/apple-touch-icon-114x114.png" sizes="114x114">
+    <!-- estilos -->
+    <link rel="stylesheet" href="/code/css/index.css">
+</head>

@@ -1,0 +1,493 @@
+/********** General ************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "m";
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    background-color: white;
+}
+
+/************ Header *************/
+
+header {
+    width: 100%;    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 15px;
+    background-color: white;
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgb(194, 192, 192);
+    padding: 0 10px;
+    margin: 0 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+header .top {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    padding: 15px 5%;
+}
+
+header .top button span {
+    margin-left: 5px;
+}
+
+header .search input {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    padding: 15px 0;
+    width: 100%;
+}
+
+header .search input::placeholder {
+    color: black;
+}
+
+header .option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+header .option svg {
+    filter: invert(65%);
+    width: 30px;
+    height: 30px;
+}
+
+header .option span {
+    width: max-content;
+    color: black;
+}
+
+header .logo {
+    width: 110px;
+}
+
+header hr {
+    height: 54px;
+    background-color: gray;
+    width: 2px;
+    border: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: red;
+    padding: 15px;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 17px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    width: max-content;
+}
+
+nav a:hover::after {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+nav a::after {
+    content: "";
+    width: 100%;
+    display: block;
+    height: 2px;
+    margin-top: 4px;
+    background-color: yellow;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    transition: clip-path .4s;
+}
+
+nav a.active::after {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/******** Menu *********/
+header .menu {
+    transform: translateX(-100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    background-color: rgb(179, 178, 178);
+    transition: transform .5s;
+    padding: 0 15px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: -1;
+}
+
+header .menu ul li {
+    margin-top: 20px;
+}
+
+header .menu ul a {
+    font-size: 20px;
+}
+
+header .menu ul a:hover {
+    color: red;
+}
+
+header .menu div span  {
+    color: white;
+}
+
+header .menu.active {
+    transform: none;
+}
+
+header .menu img {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    left: 310px;
+    top: 10px;
+    display: none;
+}
+
+header .menu > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header button {
+    background-color: transparent;
+    display: none;
+}
+
+header .icons {
+    display: none;
+    gap: 10px;
+}
+
+header .icons img, header .icons svg {
+    width: 25px;
+    height: 25px;
+}
+
+header .icons a {
+    color: black;
+}
+
+/********* content *********/
+.content {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+    padding: 50px 5%;
+    justify-content: space-between;
+}
+
+.content .box-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    row-gap: 25px;
+}
+
+.content .box {
+    text-align: center;
+    transition: box-shadow .4s;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.content .box:hover {
+    box-shadow: 3px 3px 5px gray;
+}
+
+.content .box span {
+    display: block;
+    font-size: 14px;
+}
+
+.content .box h4 {
+    font-size: 20px;
+}
+
+.content .box img{
+    height: 180px;
+    margin-bottom: 15px;
+}
+
+.content .box  a {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.content .table ul {
+    margin-top: 20px;
+} 
+
+.content .table a {
+    color: black;
+    transition: color .3s;
+}
+
+.content .table a:hover {
+    color: lightcoral;
+}
+
+.content .table li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/********** Contacto **********/
+.contacto {
+    display: flex;
+    gap: 40px;
+    justify-content: end;
+    width: 100%;
+    padding-top: 40px;
+    padding-right: 120px;
+    background-color: red;
+    color: white;
+}
+
+.contacto .info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 280px;
+}
+
+.contacto .info > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contacto .info > div img {
+    width: 25px;
+    height: 25px;
+    filter: invert(100%);
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto form input {
+    height: 35px;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+}
+
+.contacto form button {
+    height: 35px;
+    background-color: rgb(168, 29, 29);
+    color: white;
+    transition: background-color .5s;
+}
+
+.contacto form button:hover {
+    background-color: rgb(218, 63, 63);
+}
+
+/********** Footer **********/
+footer {
+    width: 100%;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    gap: 10px;
+}
+
+footer ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul hr {
+    border: none;
+    background-color: white;
+    height: 12px;
+    width: 1px;
+}
+
+/*********** Querys ************/
+@media (max-width: 1100px) {
+    /******* Content *********/
+    .content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .table {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content .table ul {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content .table a {
+        width: max-content;
+        display: block;
+    }
+
+    .content .box-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .content .box img {
+        width: 100%;
+        object-fit: cover;
+        height: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    /*********** Header *************/
+    header {
+        box-shadow: 0 1px 15px rgb(0 0 0 / 8%);
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+    }
+
+    header .top {
+        justify-content: space-between;
+    }
+
+    header .icons, header button {
+        display: flex;
+    }
+
+    header .search, header .option, header hr, header nav{
+        display: none;
+    }
+
+    header .menu {
+        z-index: 3;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /******* Content *********/
+    .content {
+        margin-top: 80px;
+        padding: 30px 5%;
+    }
+
+    /******** Contacto ********/
+    .contacto > img {
+        display: none;
+    }
+    
+    .contacto {
+        flex-direction: column;
+        padding: 30px 20px;
+        justify-content: start;
+    }
+
+    .contacto .info {
+        width: 100%;
+    }
+
+    .contacto form input, .contacto form button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 820px) {
+    /******* Content *********/
+    .content .table ul {
+        row-gap: 5px;
+    }
+    
+    .content .box-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    /******* Content *********/
+    .content .box img {
+        height: 250px;
+    }
+
+    /***** Footer *******/
+    footer ul {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /******* Content *********/
+    .content .box img {
+        height: 200px;
+    }
+}

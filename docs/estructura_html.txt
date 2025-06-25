@@ -1,0 +1,24 @@
+/proyecto/
+├── index.html
+├── code/
+│   └─── css/
+│        └─── index.css
+│        └─── servicios.css
+│        └─── nosotros.css
+│        └─── contacto.css
+│   └─── js/
+│        └─── index.js
+│        └─── servicios.js
+│        └─── librerias/
+├── recursos/
+│   └─── iconos/
+│   └─── fonts/
+│   └─── img/
+│   └─── logotipo/
+├── vistas/
+│   └─── paginas/
+│        └─── servicios.html
+│        └─── nosotros.html
+│        └─── contacto.html
+│   
+│
